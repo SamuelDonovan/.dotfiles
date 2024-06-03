@@ -45,8 +45,9 @@ alias vim="nvim"
 function frm(){
     for to_delete in "$@"
     do
+        to_delete=$(echo ${to_delete} | sed 's|/||')
         mv -f ${to_delete} ${to_delete}_old
-        rm -rf ${to_delete}_old 1>/dev/null 2>&1 &
+        (rm -rf ${to_delete}_old 1>/dev/null 2>&1 &) 
     done
 }
 
