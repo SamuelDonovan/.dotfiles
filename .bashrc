@@ -26,12 +26,7 @@ fi
 
 unset rc
 
-alias vim=nvim
-
-function jjk(){
-    # index is specifying season 2.
-    animdl stream "Jujutsu Kaisen" -p mpv --index 1 -r $1
-}
+export GIT_EDITOR=nvim
 
 alias b="cd .."
 alias bb="cd ../.."
@@ -51,4 +46,4 @@ function frm(){
     done
 }
 
-source ~/pureline ~/.pureline.conf
+source ~/.pureline/pureline ~/.pureline.conf
