@@ -1,6 +1,5 @@
 require("config.lazy")
 
-
 -- ============================================================
 -- => General 
 -- ============================================================
@@ -50,14 +49,10 @@ vim.opt.si = true
 vim.opt.wrap = true
 
 -- ============================================================
--- => Plugins 
+-- => Language Server Protocols (LSPs) 
 -- ============================================================
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.lsp.enable('pyright')
 
 -- ============================================================
 -- => Remaps
@@ -65,6 +60,13 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 
 -- Leader is the space, no other answer is correct
 vim.g.mapleader = " "
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- Open [L]ast file 
 vim.keymap.set('n', '<leader>l', '<C-^>', {noremap = true})

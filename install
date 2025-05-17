@@ -14,10 +14,13 @@ pacman -S networkmanager --noconfirm --needed
 pacman -S wofi hyprland waybar python-pywal ttf-nerd-fonts-symbols --noconfirm --needed
 
 # Tools 
-pacman -S ripgrep --noconfirm --needed
+pacman -S tmux ripgrep --noconfirm --needed
 
 # Editor
 pacman -S nvim --noconfirm --needed
+
+# Language Server Protocols (LSPs) 
+pacman -S pyright jedi-language-server bash-language-server lua-language-server  --noconfirm --needed
 
 # Dotfile Orchestrator 
 pacman -S stow --noconfirm --needed 
