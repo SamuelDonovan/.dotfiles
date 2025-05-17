@@ -26,7 +26,6 @@ fi
 
 unset rc
 
-export GIT_EDITOR=nvim
 
 alias b="cd .."
 alias bb="cd ../.."
@@ -34,6 +33,7 @@ alias bbb="cd ../../.."
 alias bbbb="cd ../../../.."
 alias bbbbb="cd ../../../../.."
 
+export GIT_EDITOR=nvim
 alias nv="nvim"
 alias vim="nvim"
 
@@ -45,5 +45,3 @@ function frm(){
         (rm -rf ${to_delete}_old 1>/dev/null 2>&1 &) 
     done
 }
-
-source ~/.pureline/pureline ~/.pureline.conf

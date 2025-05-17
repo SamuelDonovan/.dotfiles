@@ -1,0 +1,1 @@
+pacman -Syu waybar hyprpicker pywal blueman bluez networkmanager swaync yay

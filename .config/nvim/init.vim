@@ -46,20 +46,6 @@ set wrap "Wrap lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-runtime undotree.vim 
-
-" Open all vim files to the last place 
-runtime vim-lastplace.vim 
-
-" Multicursor > macros 
-let g:VM_maps                       = {}   
-let g:VM_default_mappings           = 0  
-let g:VM_maps["Add Cursor Down"]    = '<C-j>'  
-let g:VM_maps["Add Cursor Up"]      = '<C-k>'   
-let g:VM_maps["Visual Cursors"]     = '<leader>c'  
-let g:VM_maps["Start Regex Search"] = '<leader>/'  
-let g:VM_maps["Align Regex"]        = '<leader>a'
-runtime visual-multi.vim 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps

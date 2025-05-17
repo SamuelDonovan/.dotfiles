@@ -1,0 +1,16 @@
+# Pull repo if it does not exist
+if [ ! -d "~/.dotfiles" ]; then
+    cd && git clone https://github.com/SamuelDonovan/.dotfiles.git 
+    mv ~/.bashrc ~/.bashrc.bkup
+    [ -d "~/.config" ] && mv ~/.config ~/.config.bkup
+fi
+
+# General DE
+pacman -S wofi hyprland waybar python-pywal ttf-nerd-fonts-symbols --noconfirm --needed
+
+# Editor
+pacman -S nvim --noconfirm --needed
+
+# Dotfile orchestrator 
+pacman -S stow --noconfirm --needed 
+stow . --dotfiles 
