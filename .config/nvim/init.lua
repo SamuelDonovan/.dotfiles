@@ -68,6 +68,11 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
+vim.keymap.set('n', '<leader>h', '<C-w>h', {noremap = true})
+vim.keymap.set('n', '<leader>j', '<C-w>j', {noremap = true})
+vim.keymap.set('n', '<leader>k', '<C-w>k', {noremap = true})
+vim.keymap.set('n', '<leader>l', '<C-w>l', {noremap = true})
+
 -- Open [L]ast file 
 vim.keymap.set('n', '<leader>l', '<C-^>', {noremap = true})
 

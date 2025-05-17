@@ -5,7 +5,7 @@ return {
     require("lazy-lsp").setup {
         -- By default all available servers are set up. Exclude unwanted or misbehaving servers.
       excluded_servers = {
-        "ccls", "zk",
+        "ccls", "zk", "hyprls",
       },
       -- Alternatively specify preferred servers for a filetype (others will be ignored).
       preferred_servers = {
@@ -14,6 +14,9 @@ return {
             "pyright",
             "jedi-langauge-server"
         },
+        json = { },
+        toml = { },
+        css = { },
       },
     }
   end
