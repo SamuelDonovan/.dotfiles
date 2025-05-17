@@ -1,5 +1,5 @@
 # Pull repo if it does not exist
-if [ ! -d "~/.dotfiles" ]; then
+if [ -d "~/.dotfiles" ]; then
     cd && git clone https://github.com/SamuelDonovan/.dotfiles.git 
     mv ~/.bashrc ~/.bashrc.bkup
     [ -d "~/.config" ] && mv ~/.config ~/.config.bkup
@@ -13,4 +13,4 @@ pacman -S nvim --noconfirm --needed
 
 # Dotfile orchestrator 
 pacman -S stow --noconfirm --needed 
-stow . --dotfiles 
+cd ~/.dotfiles && stow . --dotfiles 
