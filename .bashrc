@@ -45,3 +45,7 @@ function frm(){
         (rm -rf ${to_delete}_old 1>/dev/null 2>&1 &) 
     done
 }
+
+
+# Start Starship prompt 
+eval "$(starship init bash)"

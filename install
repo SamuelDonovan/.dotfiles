@@ -1,16 +1,20 @@
-# Pull repo if it does not exist
-if [ -d "~/.dotfiles" ]; then
+# One Time Setup 
+if [ -d "/home/${SUDO_USER}/.dotfiles" ]; then
     cd && git clone https://github.com/SamuelDonovan/.dotfiles.git 
-    mv ~/.bashrc ~/.bashrc.bkup
-    [ -d "~/.config" ] && mv ~/.config ~/.config.bkup
+    mv /home/${SUDO_USER}/.bashrc ~/.bashrc.bkup
+    [ -d "/home/${SUDO_USER}/.config" ] && mv /home/${SUDO_USER}/.config /home/${SUDO_USER}/.config.bkup
 fi
 
-# General DE
+# System Management 
+pacman -S networkmanager --noconfirm --needed
+
+# Desktop Environment
 pacman -S wofi hyprland waybar python-pywal ttf-nerd-fonts-symbols --noconfirm --needed
 
 # Editor
 pacman -S nvim --noconfirm --needed
 
-# Dotfile orchestrator 
+# Dotfile Orchestrator 
 pacman -S stow --noconfirm --needed 
-cd ~/.dotfiles && stow . --dotfiles 
+cd /home/${SUDO_USER}/.dotfiles && stow . --dotfiles 
+source /home/${SUDO_USER}/.bashrc
