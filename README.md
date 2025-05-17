@@ -10,3 +10,8 @@ My dotfiles
 ```
 sudo curl https://raw.githubusercontent.com/SamuelDonovan/.dotfiles/refs/heads/main/install | sh
   ```  
+
+## Inspiration
+
+Shout out to those I pulled heavily from:
+* https://github.com/elifouts/Dotfiles
