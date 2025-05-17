@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # One Time Setup 
 if [ -d "/home/${SUDO_USER}/.dotfiles" ]; then
     cd && git clone https://github.com/SamuelDonovan/.dotfiles.git 
@@ -10,6 +12,9 @@ pacman -S networkmanager --noconfirm --needed
 
 # Desktop Environment
 pacman -S wofi hyprland waybar python-pywal ttf-nerd-fonts-symbols --noconfirm --needed
+
+# Tools 
+pacman -S ripgrep --noconfirm --needed
 
 # Editor
 pacman -S nvim --noconfirm --needed
