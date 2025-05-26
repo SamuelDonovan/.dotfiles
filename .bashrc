@@ -34,6 +34,7 @@ alias bbbb="cd ../../../.."
 alias bbbbb="cd ../../../../.."
 
 export GIT_EDITOR=nvim
+set -o vi
 alias nv="nvim"
 alias vim="nvim"
 

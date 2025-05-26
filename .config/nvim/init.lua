@@ -52,7 +52,14 @@ vim.opt.wrap = true
 -- => Language Server Protocols (LSPs) 
 -- ============================================================
 
-vim.lsp.enable('pyright')
+-- ============================================================
+-- => Undofile 
+-- ============================================================
+
+vim.opt.undofile=true
+vim.opt.undodir=UNDODIR
+vim.opt.undolevels=1000
+vim.opt.undoreload=10000
 
 -- ============================================================
 -- => Remaps
@@ -72,9 +79,6 @@ vim.keymap.set('n', '<leader>h', '<C-w>h', {noremap = true})
 vim.keymap.set('n', '<leader>j', '<C-w>j', {noremap = true})
 vim.keymap.set('n', '<leader>k', '<C-w>k', {noremap = true})
 vim.keymap.set('n', '<leader>l', '<C-w>l', {noremap = true})
-
--- Open [L]ast file 
-vim.keymap.set('n', '<leader>l', '<C-^>', {noremap = true})
 
 -- Open file browser 
 vim.keymap.set( 'n', '<leader>e', '<Esc>:Lex<cr>:vertical resize 30<cr>', {noremap = true})
